@@ -1,0 +1,12 @@
+.due {
+    color: red;
+}
+
+.paid > * {
+    opacity: 0.3;
+}
+
+.amount-paid {
+    color: red;
+    text-transform: uppercase;
+}

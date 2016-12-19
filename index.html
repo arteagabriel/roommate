@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- Your app title -->
+        <title>Roommate</title>
+        <!-- Path to Framework7 Library CSS, iOS Theme -->
+        <link rel="stylesheet" href="css/framework7.ios.min.css">
+        <!-- Path to Framework7 color related styles, iOS Theme -->
+        <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+        <!-- Path to your custom app styles-->
+        <link rel="stylesheet" href="css/my-app.css">
+        <link rel="stylesheet" href="css/framework7-icons.css">
+    </head>
+    <body>
+        <!-- Status bar overlay for full screen mode (PhoneGap) -->
+        <div class="statusbar-overlay"></div>
+        <!-- Views -->
+        <!-- Tabs, now tabs wrapper is "views" -->
+        <div class="views tabs toolbar-fixed">
+            <div id="bills" class="view tab active">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center">Bills</div>
+                        <div class="right">
+                            <a href="" class="link">
+                                <i class="icon f7-icons add-bill">add</i>
+                            </a>
+                        </div>
+                        <div class="subnavbar">
+                            <div class="buttons-row">
+                                <a href="#incoming-bills" class="button tab-link active">Incoming</a>
+                                <a href="#outgoing-bills" class="button tab-link">Outgoing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages navbar-through">
+                    <div data-page="home-1" class="page with-subnavbar">
+                        <div class="page-content hide-bars-on-scroll">
+                            <div class="tabs">
+                                <div class="list-block cards-list bills tab active" id="incoming-bills">
+                                    <ul class="bills-list">
+                                        <li class="card bill">
+                                            <div class="card-header">
+                                                <div class="col-50">Bill:</div>
+                                                <div class="col-50">Rent</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-50">From:</div>
+                                                <div class="col-50">Arash Koushkebaghi</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-50">Due Date:</div>
+                                                <div class="col-50 due">12/20/2016</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-33">Amount:</div>
+                                                <div class="col-33 amount-paid"></div>
+                                                <div class="col-33">$600.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="card bill">
+                                            <div class="card-header">
+                                                <div class="col-50">Bill:</div>
+                                                <div class="col-50">Internet</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-50">From:</div>
+                                                <div class="col-50">Arash Koushkebaghi</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-50">Due Date:</div>
+                                                <div class="col-50 due">01/30/2017</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-33">Amount:</div>
+                                                <div class="col-33 amount-paid"></div>
+                                                <div class="col-33">$15.00</div>
+                                            </div>
+                                        </li>
+                                        <li class="card paid bill">
+                                            <div class="card-header">
+                                                <div class="col-50">Bill:</div>
+                                                <div class="col-50">Water</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-50">From:</div>
+                                                <div class="col-50">Arash Koushkebaghi</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-50">Due Date:</div>
+                                                <div class="col-50">11/30/2016</div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="col-33">Amount:</div>
+                                                <div class="col-33 amount-paid">Paid</div>
+                                                <div class="col-33">$15.00</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list-block cards-list bills tab" id="outgoing-bills">
+                                    <ul class="bills-list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="shopping" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">Shopping</div>
+                        <div class="right">
+                            <a href="" class="link">
+                                <i class="icon f7-icons add-item">add</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages navbar-fixed">
+                    <div data-page="home-2" class="page">
+                        <div class="page-content hide-bars-on-scroll">
+                            <div class="list-block cards-list shoppings tab active" id="">
+                                <ul class="shopping-list">
+                                    <li class="card shop-item">
+                                        <div class="card-header">
+                                            <div class="col-50">Item:</div>
+                                            <div class="col-50">Toilet Paper</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Qty:</div>
+                                            <div class="col-50">2</div>
+                                        </div>
+                                    </li>
+                                    <li class="card shop-item">
+                                        <div class="card-header">
+                                            <div class="col-50">Item:</div>
+                                            <div class="col-50">Dish Soap</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Qty:</div>
+                                            <div class="col-50">1</div>
+                                        </div>
+                                    </li>
+                                    <li class="card shop-item">
+                                        <div class="card-header">
+                                            <div class="col-50">Item:</div>
+                                            <div class="col-50">Beer</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Qty:</div>
+                                            <div class="col-50">12</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#bills" id="chat-back" class="link">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                        <div class="center">Chat</div>
+                    </div>
+                </div>
+                <div class="pages navbar-fixed toolbar-fixed">
+                    <div data-page="home-3" class="page">
+                        <div class="toolbar messagebar">
+                            <div class="toolbar-inner">
+                                <textarea placeholder="Message"></textarea><a href="#" class="link">Send</a>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="messages">
+                                <div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>
+                                <div class="message message-sent">
+                                    <div class="message-text">Hello</div>
+                                </div>
+                                <div class="message message-sent">
+                                    <div class="message-text">How are you?</div>
+                                </div>
+                                <div class="message message-with-avatar message-received">
+                                    <div class="message-name">Kate</div>
+                                    <div class="message-text">I am fine, thanks</div>
+                                    <div style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)" class="message-avatar"></div>
+                                </div>
+                                <div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>
+                                <div class="message message-pic message-sent">
+                                    <div class="message-text"><img src="http://lorempixel.com/300/300/"></div>
+                                    <div class="message-label">Delivered 2 days ago</div>
+                                </div>
+                                <div class="message message-sent">
+                                    <div class="message-text">
+                                        How are you?
+                                        <div class="message-date">Nov 11, 2016</div>
+                                    </div>
+                                    <div class="message-label">Delivered 2 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chores" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">Chores</div>
+                        <div class="right">
+                            <a href="" class="link">
+                                <i class="icon f7-icons add-chore">add</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages navbar-fixed">
+                    <div data-page="home-4" class="page">
+                        <div class="page-content">
+                            <div class="list-block cards-list chores tab active" id="">
+                                <ul class="chores-list">
+                                    <li class="card chore">
+                                        <div class="card-header">
+                                            <div class="col-50">Chore:</div>
+                                            <div class="col-50">Clean Toilet</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Assignee:</div>
+                                            <div class="col-50">Arash Koushkebaghi</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Due:</div>
+                                            <div class="col-50 due">12/16/2016</div>
+                                        </div>
+                                    </li>
+                                    <li class="card chore">
+                                        <div class="card-header">
+                                            <div class="col-50">Chore:</div>
+                                            <div class="col-50">Wash Dishes</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Assignee:</div>
+                                            <div class="col-50">Arash Koushkebaghi</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Due:</div>
+                                            <div class="col-50">12/30/2016</div>
+                                        </div>
+                                    </li>
+                                    <li class="card chore">
+                                        <div class="card-header">
+                                            <div class="col-50">Chore:</div>
+                                            <div class="col-50">Vaccuum Living Room</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Assignee:</div>
+                                            <div class="col-50">Arash Koushkebaghi</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="col-50">Due:</div>
+                                            <div class="col-50">01/30/2017</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">Settings</div>
+                    </div>
+                </div>
+                <div class="pages navbar-fixed">
+                    <div data-page="home-5" class="page">
+                        <div class="page-content">
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">First Name</div>
+                                            <div class="item-after">Gabriel</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Last Name</div>
+                                            <div class="item-after">Arteaga</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">House Name</div>
+                                            <div class="item-after">362 Santa Lucia Dr.</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">House ID</div>
+                                            <div class="item-after">F4732969SH</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title"># Members</div>
+                                            <div class="item-after">4</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Email</div>
+                                            <div class="item-after">gabrielarteaga71@gmail.com</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">Venmo</div>
+                                            <div class="item-after">@garteaga</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tab bar with tab links -->
+            <div class="toolbar tabbar tabbar-labels">
+                <div class="toolbar-inner">
+                    <a href="#bills" class="tab-link active" id="bills-tab">
+                        <i class="icon f7-icons">card</i>
+                        <span class="tabbar-label tab-bar-label-size">Bills</span>
+                    </a>
+                    <a href="#shopping" class="tab-link">
+                        <i class="icon f7-icons">bag</i>
+                        <span class="tabbar-label tab-bar-label-size">Shopping</span>
+                    </a>
+                    <a href="#chat" class="tab-link" id="chat-tab-bar">
+                        <i class="icon f7-icons">chat</i>
+                        <span class="tabbar-label tab-bar-label-size">Chat</span>
+                    </a>
+                    <a href="#chores" class="tab-link">
+                        <i class="icon f7-icons">list</i>
+                        <span class="tabbar-label tab-bar-label-size">Chores</span>
+                    </a>
+                    </a>
+                    <a href="#settings" class="tab-link">
+                        <i class="icon f7-icons">settings</i>
+                        <span class="tabbar-label tab-bar-label-size">Settings</span>
+                    </a>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="popup bill-popup">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="" class="link close-popup">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="content-block-title">Request Bill</div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">document_text</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Bill: </div>
+                                <div class="item-input">
+                                    <input type="text"  id="bill-name">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">persons</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">To: </div>
+                                <div class="item-input house-members">
+                                    <select id="request-to">
+                                        <option>Arash Koushkebaghi</option>
+                                        <option>Andrew Messner</option>
+                                        <option>Adam Chisum</option>
+                                        <option>All</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">calendar</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Due: </div>
+                                <div class="item-input">
+                                    <input type="date" id="request-due" placeholder="Birth day" value="2016-04-30">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">money_dollar</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Amount: </div>
+                                <div class="item-input">
+                                    <input type="number" id="request-amount">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">check</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Split Bill: </div>
+                                <div class="item-input">
+                                    <label class="label-switch no-fastclick">
+                                        <input type="checkbox" id="split-bill-check">
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+            <a href="" class="button request-button close-popup" style="width: 80%; display: block; margin: 0 auto">Request</a>
+        </div>
+
+        <div class="popup item-popup">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="" class="link close-popup">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="content-block-title">Add to Shopping List</div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">box</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Item: </div>
+                                <div class="item-input">
+                                    <input type="text"  id="item-name">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">sort</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Qty: </div>
+                                <div class="item-input">
+                                    <input type="text"  id="item-qty">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </ul>
+            </div> 
+            <a href="" class="button request-button close-popup" style="width: 80%; display: block; margin: 0 auto">Request</a>
+        </div>
+
+        <div class="popup chore-popup">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="" class="link close-popup">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="content-block-title">Add Chore</div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">box</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Chore: </div>
+                                <div class="item-input">
+                                    <input type="text"  id="chore-name">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">persons</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Assignee: </div>
+                                <div class="item-input house-members">
+                                    <select id="chore-to">
+                                        <option>Arash Koushkebaghi</option>
+                                        <option>Andrew Messner</option>
+                                        <option>Adam Chisum</option>
+                                        <option>All</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon f7-icons">calendar</i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">Due: </div>
+                                <div class="item-input">
+                                    <input type="date" id="chore-due" placeholder="Birth day" value="2016-04-30">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </ul>
+            </div> 
+            <a href="" class="button request-button close-popup" style="width: 80%; display: block; margin: 0 auto">Request</a>
+        </div>
+        <!-- Path to Framework7 Library JS-->
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+        <!-- Path to your app js-->
+        <script type="text/javascript" src="js/my-app.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    </body>
+</html> 
